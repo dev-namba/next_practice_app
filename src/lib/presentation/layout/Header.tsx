@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import appTitle from "pages/api/new_world";
 
 const Header = () => {
-  const [title] = useState(appTitle("encer"));
+  const [title] = useState(appTitle("KenJob"));
 
   return (
     <Flex as="header" width="full" align="center">

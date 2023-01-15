@@ -55,7 +55,7 @@ npx degit sozonome/nextarter-chakra <YOUR_APP_NAME>
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:4000](http://localhost:4000) with your browser to see the result.
 
 You can start editing the page by modifying `src/lib/pages/index.tsx`. The page auto-updates as you edit the file.
 
@@ -68,4 +68,5 @@ References:
 
 - https://nextjs.org/docs/testing#playwright
   - https://nextjs.org/docs/testing#running-your-playwright-tests
+
 # next_practice_app

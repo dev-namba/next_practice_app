@@ -1,128 +1,99 @@
 import {
-  Heading,
-  Avatar,
   Box,
   Center,
   Text,
   Stack,
+  List,
+  ListItem,
+  ListIcon,
   Button,
-  Link,
-  Badge,
   useColorModeValue,
+  ButtonProps,
 } from "@chakra-ui/react";
-import { User } from "lib/model/types/todo";
+import { CheckIcon } from "@chakra-ui/icons";
 import { FC } from "react";
+import { Course } from "lib/model/types/course";
 
-type TodoProps = {
-  user: User;
+type CourseProps = {
+  course: Course;
+  onTap: VoidFunction;
 };
-const SocialProfileSimple: FC<TodoProps> = (props) => (
+const CourseItem: FC<CourseProps> = (props) => (
   <Center py={6}>
     <Box
-      maxW={"320px"}
+      maxW={"330px"}
       w={"full"}
       bg={useColorModeValue("white", "gray.900")}
       boxShadow={"2xl"}
-      rounded={"lg"}
-      p={6}
-      textAlign={"center"}
+      rounded={"md"}
+      overflow={"hidden"}
     >
-      <Avatar
-        size={"xl"}
-        src={
-          "https://images.unsplash.com/photo-1520810627419-35e362c5dc07?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
-        }
-        mb={4}
-        pos={"relative"}
-        _after={{
-          content: '""',
-          w: 4,
-          h: 4,
-          bg: "green.300",
-          border: "2px solid white",
-          rounded: "full",
-          pos: "absolute",
-          bottom: 0,
-          right: 3,
-        }}
-      />
-      <Heading fontSize={"2xl"} fontFamily={"body"}>
-        {props.user.id}
-      </Heading>
-      <Text fontWeight={600} color={"gray.500"} mb={4}>
-        @lindsey_jam3s
-      </Text>
-      <Text
+      <Stack
         textAlign={"center"}
-        color={useColorModeValue("gray.700", "gray.400")}
-        px={3}
+        p={6}
+        color={useColorModeValue("gray.800", "white")}
+        align={"center"}
       >
-        Actress, musician, songwriter and artist. PM for work inquires or{" "}
-        <Link href={"#"} color={"blue.400"}>
-          #tag
-        </Link>{" "}
-        me in your posts
-      </Text>
-
-      <Stack align={"center"} justify={"center"} direction={"row"} mt={6}>
-        <Badge
-          px={2}
-          py={1}
-          bg={useColorModeValue("gray.50", "gray.800")}
-          fontWeight={"400"}
+        <Text
+          fontSize={"sm"}
+          fontWeight={500}
+          bg={useColorModeValue("green.50", "green.900")}
+          p={2}
+          px={3}
+          color={useColorModeValue("green.900", "green.50")}
+          rounded={"full"}
         >
-          #art
-        </Badge>
-        <Badge
-          px={2}
-          py={1}
-          bg={useColorModeValue("gray.50", "gray.800")}
-          fontWeight={"400"}
-        >
-          #photography
-        </Badge>
-        <Badge
-          px={2}
-          py={1}
-          bg={useColorModeValue("gray.50", "gray.800")}
-          fontWeight={"400"}
-        >
-          #music
-        </Badge>
+          {props.course.title}
+        </Text>
+        <Stack direction={"row"} align={"center"} justify={"center"}>
+          <Text fontSize={"3xl"}>$</Text>
+          <Text fontSize={"6xl"} fontWeight={800}>
+            {props.course.price}
+          </Text>
+          <Text color={"gray.500"}>/month</Text>
+        </Stack>
       </Stack>
 
-      <Stack mt={8} direction={"row"} spacing={4}>
+      <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
+        <List spacing={3}>
+          <ListItem>
+            <ListIcon as={CheckIcon} color="green.400" />
+            5.000 page views
+          </ListItem>
+          <ListItem>
+            <ListIcon as={CheckIcon} color="green.400" />
+            50 automation executions
+          </ListItem>
+          <ListItem>
+            <ListIcon as={CheckIcon} color="green.400" />
+            50 identified users
+          </ListItem>
+          <ListItem>
+            <ListIcon as={CheckIcon} color="green.400" />
+            All features
+          </ListItem>
+        </List>
+
         <Button
-          flex={1}
-          fontSize={"sm"}
-          rounded={"full"}
-          _focus={{
-            bg: "gray.200",
-          }}
-        >
-          Message
-        </Button>
-        <Button
-          flex={1}
-          fontSize={"sm"}
-          rounded={"full"}
-          bg={"blue.400"}
+          mt={10}
+          w={"full"}
+          bg={"green.400"}
           color={"white"}
-          boxShadow={
-            "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
-          }
+          rounded={"xl"}
+          boxShadow={"0 5px 20px 0px rgb(72 187 120 / 43%)"}
           _hover={{
-            bg: "blue.500",
+            bg: "green.500",
           }}
           _focus={{
-            bg: "blue.500",
+            bg: "green.500",
           }}
+          onClick={props.onTap}
         >
-          Follow
+          見たくもない
         </Button>
-      </Stack>
+      </Box>
     </Box>
   </Center>
 );
 
-export default SocialProfileSimple;
+export default CourseItem;
