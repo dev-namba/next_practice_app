@@ -7,7 +7,6 @@ import defaultSEOConfig from "../../next-seo.config.js";
 import { Chakra } from "lib/components/Chakra";
 import Layout from "lib/layout";
 import "lib/styles/globals.css";
-import Sidebar from "lib/components/Sidebar/Sidebar";
 import { Box, useBreakpointValue } from "@chakra-ui/react";
 import { useState } from "react";
 
