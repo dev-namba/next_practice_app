@@ -1,8 +1,6 @@
 import { useRecoilState } from "recoil";
 import { courseListState } from "lib/model/atoms/course_atom";
-import { Box, SimpleGrid, Button } from "@chakra-ui/react";
-import SocialProfileSimple from "lib/presentation/components/items/todo_item";
-import { User } from "lib/model/types/todo";
+import { SimpleGrid, Button } from "@chakra-ui/react";
 import CourseItem from "lib/presentation/components/items/todo_item";
 import { Course } from "lib/model/types/course";
 
@@ -19,21 +17,21 @@ const CourseList = () => {
   const addCourse = () => {
     setCourseList([
       {
-        id: "naa",
+        id: "4",
         title: "復刻版-超お得",
         detail: "naa",
         isComplete: true,
         price: 0,
       },
       {
-        id: "naa",
+        id: "5",
         title: "復刻版-超お得",
         detail: "naa",
         isComplete: true,
         price: 0,
       },
       {
-        id: "naa",
+        id: "6",
         title: "復刻版-超お得",
         detail: "naa",
         isComplete: true,

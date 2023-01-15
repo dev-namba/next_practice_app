@@ -16,7 +16,7 @@ import { Course } from "lib/model/types/course";
 
 type CourseProps = {
   course: Course;
-  onTap: VoidFunction;
+  onTap?: VoidFunction;
 };
 const CourseItem: FC<CourseProps> = (props) => (
   <Center py={6}>
