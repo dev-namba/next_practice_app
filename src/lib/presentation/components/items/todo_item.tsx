@@ -8,7 +8,6 @@ import {
   ListIcon,
   Button,
   useColorModeValue,
-  ButtonProps,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import { FC } from "react";
