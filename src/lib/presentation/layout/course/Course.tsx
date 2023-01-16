@@ -3,6 +3,7 @@ import { courseListState } from "lib/model/atoms/course_atom";
 import { SimpleGrid, Button } from "@chakra-ui/react";
 import CourseItem from "lib/presentation/components/items/todo_item";
 import { Course } from "lib/model/types/course";
+import CourseButton from "lib/presentation/components/button/course_button";
 
 const CourseList = () => {
   const [courseList, setCourseList] = useRecoilState(courseListState);
@@ -41,7 +42,7 @@ const CourseList = () => {
   };
 
   return courseList.length !== 0 ? (
-    <SimpleGrid columns={3} spacing={10} alignItems="center">
+    <SimpleGrid columns={3} spacing={10}>
       {courseList.map((item: Course) => (
         <CourseItem
           key={item.id}
@@ -51,23 +52,7 @@ const CourseList = () => {
       ))}
     </SimpleGrid>
   ) : (
-    <Button
-      mt={10}
-      // w={"70.vw"}
-      bg={"green.400"}
-      color={"white"}
-      rounded={"xl"}
-      boxShadow={"0 5px 20px 0px rgb(72 187 120 / 43%)"}
-      _hover={{
-        bg: "green.500",
-      }}
-      _focus={{
-        bg: "green.500",
-      }}
-      onClick={addCourse}
-    >
-      復刻版を無料でゲット
-    </Button>
+    <CourseButton onTap={() => addCourse()} />
   );
 };
 
