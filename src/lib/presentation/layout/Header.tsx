@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 import appTitle from "pages/api/new_world";
 
 const Header = () => {
-  const [title] = useState(appTitle("KenJob"));
+  const [title] = useState(appTitle("encer"));
 
   return (
-    <Flex as="header" width="full" align="center">
+    <Flex as="header" width="full" align="center" padding="2">
       <Heading as="h1" size="lg">
         {title}
       </Heading>

@@ -10,10 +10,10 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <Box margin="0 auto" maxWidth="full" transition="0.5s ease-out">
-      <Box margin="4">
+    <Box minWidth="full" maxWidth="full" transition="0.5s ease-out">
+      <Box>
         <Header />
-        <Box as="main" marginY={22}>
+        <Box as="main" marginY={22} maxWidth="full">
           {children}
         </Box>
         <Footer />
