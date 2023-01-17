@@ -10,8 +10,8 @@ import {
 } from "react-icons/fi";
 
 // Todoリストを保持
-const sizeMenuState = atom<SideMenu[]>({
-  key: "courseListState",
+const sideMenuState = atom<SideMenu[]>({
+  key: "sideMenuState",
   default: [
     { title: "Home", icon: FiHome },
     { title: "Trending", icon: FiTrendingUp },
@@ -21,4 +21,4 @@ const sizeMenuState = atom<SideMenu[]>({
   ],
 });
 
-export { sizeMenuState };
+export { sideMenuState };

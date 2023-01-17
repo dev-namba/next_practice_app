@@ -44,6 +44,7 @@ const UserItem: FC<UserProps> = (props) => {
             <Wrap spacingY="12px" align="center">
               {props.user.tags.map((value, index) => (
                 <TagWidget
+                  key={value}
                   tag={value}
                   onTap={() => {
                     console.log(index);

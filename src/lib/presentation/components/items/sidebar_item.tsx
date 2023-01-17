@@ -14,6 +14,7 @@ import { SideMenu } from "lib/model/types/side_menu";
 type SidebarItemProps = {
   onTap: VoidFunction;
   sideMenu: SideMenu;
+  selectMenu: SideMenu;
 };
 const SideBarItem: FC<SidebarItemProps> = (props) => {
   return (
@@ -23,12 +24,16 @@ const SideBarItem: FC<SidebarItemProps> = (props) => {
       role="group"
       cursor="pointer"
       w="100%"
+      bg={
+        props.selectMenu === props.sideMenu ? theme.colors.gray[400] : "white"
+      }
       _hover={{
-        bg: theme.colors.gray[400],
+        bg: theme.colors.gray[200],
         color: "white",
       }}
       height="50px"
       borderRadius="12px"
+      onClick={() => props.onTap()}
     >
       <Box w="20px" />
       <Center w="50px" h="50px">
