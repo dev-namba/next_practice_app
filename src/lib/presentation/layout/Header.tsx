@@ -1,14 +1,5 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Center,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
 import ThemeToggle from "./ThemeToggle";
-import { useState, useEffect } from "react";
-
-import appTitle from "pages/api/new_world";
 import Padding from "../components/common/padding";
 
 const Header = () => {

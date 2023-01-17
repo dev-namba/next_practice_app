@@ -1,9 +1,7 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 
 import { Flex } from "@chakra-ui/react";
 import SideBarItem from "../components/items/sidebar_item";
-import { useRecoilState } from "recoil";
-import { sideMenuState } from "lib/model/atoms/side_menu_atom";
 import Padding from "../components/common/padding";
 import { SideMenu } from "lib/model/types/side_menu";
 import {

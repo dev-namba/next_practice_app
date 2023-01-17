@@ -15,7 +15,7 @@ const ProductPage = () => {
         mb={8}
         w="full"
       >
-        <NextSeo title="Home" />
+        <NextSeo title="Product" />
         <ProductList />
       </Flex>
     </Box>

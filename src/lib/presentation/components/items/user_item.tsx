@@ -20,7 +20,7 @@ type UserProps = {
 const UserItem: FC<UserProps> = (props) => {
   return (
     <Box
-      minWidth="250px"
+      minWidth="100px"
       bg={useColorModeValue(theme.colors.gray[100], "gray.900")}
       borderRadius="12px"
     >

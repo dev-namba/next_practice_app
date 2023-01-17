@@ -12,7 +12,7 @@ const Course = () => {
       mb={8}
       w="full"
     >
-      <NextSeo title="course" />
+      <NextSeo title="Course" />
       <CourseList />
     </Flex>
   );

@@ -12,8 +12,7 @@ const UsersPage = () => {
       w="full"
       bg={useColorModeValue("gray.300", "gray.600")}
     >
-      <NextSeo title="Home" />
-
+      <NextSeo title="User" />
       <UserListLayout />
     </Flex>
   );
