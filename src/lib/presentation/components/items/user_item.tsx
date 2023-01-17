@@ -5,9 +5,7 @@ import {
   Avatar,
   Text,
   Heading,
-  HStack,
   theme,
-  Stack,
   Wrap,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -31,10 +29,16 @@ const UserItem: FC<UserProps> = (props) => {
           <Padding>
             <Avatar />
           </Padding>
-          <Heading>{props.user.name}</Heading>
-          <Text>{props.user.id}</Text>
+          <Heading color={useColorModeValue("gray.800", "white")}>
+            {props.user.name}
+          </Heading>
+          <Text color={useColorModeValue("gray.800", "white")}>
+            {props.user.id}
+          </Text>
           <Padding>
-            <Text>{props.user.profile}</Text>
+            <Text color={useColorModeValue("gray.800", "white")}>
+              {props.user.profile}
+            </Text>
           </Padding>
           <Box w="100%">
             <Wrap spacingY="12px" align="center">

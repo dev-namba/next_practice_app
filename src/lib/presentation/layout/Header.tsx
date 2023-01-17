@@ -20,7 +20,7 @@ const Header = () => {
           size="lg"
           color={useColorModeValue("gray.800", "white")}
         >
-          encer
+          Next
         </Heading>
       </Padding>
       <Box marginLeft="auto">
